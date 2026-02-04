@@ -210,6 +210,7 @@ GameObject:
   - component: {fileID: 81650452}
   - component: {fileID: 81650451}
   - component: {fileID: 81650450}
+  - component: {fileID: 81650454}
   m_Layer: 5
   m_Name: HealButton
   m_TagString: Untagged
@@ -319,6 +320,21 @@ RectTransform:
   m_AnchoredPosition: {x: 240.29999, y: -0.3499756}
   m_SizeDelta: {x: -5.209999, y: -47.08}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &81650454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81650449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d4e1b76337d05749952c3871a9bf110, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _button: {fileID: 81650450}
+  _health: {fileID: 2087366778}
+  _heal: 10
 --- !u!1 &84308540
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,6 +345,7 @@ GameObject:
   m_Component:
   - component: {fileID: 84308541}
   - component: {fileID: 84308542}
+  - component: {fileID: 84308543}
   m_Layer: 5
   m_Name: SmoothSlider
   m_TagString: Untagged
@@ -408,6 +425,21 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &84308543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 84308540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dcd964d36185bf4bbed3650319ff33e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: 2087366778}
+  _slider: {fileID: 84308542}
+  _smoothTime: 0.3
 --- !u!1 &240082667
 GameObject:
   m_ObjectHideFlags: 0
@@ -493,6 +525,7 @@ GameObject:
   m_Component:
   - component: {fileID: 472888135}
   - component: {fileID: 472888136}
+  - component: {fileID: 472888137}
   m_Layer: 5
   m_Name: NormalSlider
   m_TagString: Untagged
@@ -572,6 +605,20 @@ MonoBehaviour:
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls: []
+--- !u!114 &472888137
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 472888134}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccb80abed9962da4aba8c75ed80b9f0c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _health: {fileID: 2087366778}
+  _slider: {fileID: 472888136}
 --- !u!1 &477560603
 GameObject:
   m_ObjectHideFlags: 0
@@ -1092,8 +1139,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1009355806}
-  - component: {fileID: 1009355808}
-  - component: {fileID: 1009355809}
+  - component: {fileID: 1009355807}
   m_Layer: 0
   m_Name: HealthUI
   m_TagString: Untagged
@@ -1117,7 +1163,7 @@ Transform:
   - {fileID: 777875236}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1009355808
+--- !u!114 &1009355807
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1126,27 +1172,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1009355805}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3dcd964d36185bf4bbed3650319ff33e, type: 3}
+  m_Script: {fileID: 11500000, guid: e9f075567004e3248a4d54ff1de5bff3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _health: {fileID: 2087366778}
-  _slider: {fileID: 84308542}
-  _speed: 0.1
---- !u!114 &1009355809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1009355805}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c809469a06bd041458c0d3949361e44d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
   _healthText: {fileID: 1960659784}
-  _slider: {fileID: 472888136}
-  _health: {fileID: 2087366778}
 --- !u!1 &1418039145
 GameObject:
   m_ObjectHideFlags: 0
@@ -1159,6 +1189,7 @@ GameObject:
   - component: {fileID: 1418039148}
   - component: {fileID: 1418039147}
   - component: {fileID: 1418039149}
+  - component: {fileID: 1418039150}
   m_Layer: 5
   m_Name: DamageButton
   m_TagString: Untagged
@@ -1268,53 +1299,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
---- !u!1 &1584584995
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1584584997}
-  - component: {fileID: 1584584996}
-  m_Layer: 0
-  m_Name: ButtonsHandler
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1584584996
+--- !u!114 &1418039150
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584584995}
+  m_GameObject: {fileID: 1418039145}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6c0d1e2b503ca5f449b3b3e0ab619b38, type: 3}
+  m_Script: {fileID: 11500000, guid: 8c7ec902ed2a256469800496c881d2a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _damageButton: {fileID: 1418039149}
-  _healButton: {fileID: 81650450}
+  _button: {fileID: 1418039149}
   _health: {fileID: 2087366778}
---- !u!4 &1584584997
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1584584995}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.5896196, y: 0.24265732, z: 305.5981}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  _damage: 15
 --- !u!1 &1769695103
 GameObject:
   m_ObjectHideFlags: 0
@@ -1746,5 +1745,4 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1009355806}
   - {fileID: 723913007}
-  - {fileID: 1584584997}
   - {fileID: 2087366779}
